@@ -11,6 +11,7 @@ const Logo: React.FC<LogoProps> = ({
   variant = 'dark',
   animated = false 
 }) => {
+  const logoSrc = `${import.meta.env.BASE_URL}logo-sp-creative.png`;
   
   const style: React.CSSProperties = {};
 
@@ -22,7 +23,7 @@ const Logo: React.FC<LogoProps> = ({
 
   return (
     <img 
-      src="LOGO%20SP%20CREATIVE.png" 
+      src={logoSrc} 
       alt="SP Creative Logo" 
       className={`${className} object-contain ${animated ? 'animate-logo-pulse' : ''}`}
       style={style}
